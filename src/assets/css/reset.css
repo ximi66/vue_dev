@@ -1,0 +1,11 @@
+html{
+  font-size: 62.5%; /*12px = 1.2rem*/
+  color: #333;
+}
+a{
+  color: #333;
+}
+html,body{
+  height: 100%;
+  background-color: #f4f5f5;
+}

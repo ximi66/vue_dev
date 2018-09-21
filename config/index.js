@@ -10,7 +10,16 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',// 静态资源文件夹
     assetsPublicPath: '/',// 发布路径
-    proxyTable: {},//代理
+    proxyTable: {
+     /* '/xxx': {
+        //target: 'http://127.0.0.1:8080/',
+        target: '',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/xxx': '/xxx'
+        }
+      }*/
+    },//代理
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

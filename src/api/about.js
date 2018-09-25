@@ -12,7 +12,7 @@ export function detailApi(param) {
 
 export function synLogInfoApi(param) {
   return axios({
-    url: "/dsc/sys/main-info/syn-log-info",
+    url: "/api/data",
     headers: {
       "Content-Type": "application/json;charset=UTF-8"
     },
@@ -21,34 +21,3 @@ export function synLogInfoApi(param) {
   });
 }
 
-export function matchAllApi(param) {
-  return axios({
-    url: "/dsc/sys/main-info/match-all",
-    headers: {
-      "Content-Type": "application/json;charset=UTF-8"
-    },
-    method: "post",
-    data: param
-  });
-}
-
-export function attachmentInfoApi(param) {
-  return axios({
-    url: "/dsc/sys/main-info/attachment-info",
-    headers: {
-      "Content-Type": "application/json;charset=UTF-8"
-    },
-    method: "post",
-    data: param
-  });
-}
-
-export function infoApi(param) {
-  return axios({
-    url: `/dsc/sys/main-info/table/info/${param.applyNo}/${param.tableInfo}`,
-    headers: {
-      "Content-Type": "application/json;charset=UTF-8"
-    },
-    method: "post"
-  });
-}

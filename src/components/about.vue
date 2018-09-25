@@ -1,6 +1,11 @@
 <template>
-  <div class="hello">
-    about
+  <div class="about">
+    <Row>
+      <Col span="8" v-for="item in msg" :key="item.name">
+        <img :src="item.img" alt="">
+        {{item.name}}
+      </Col>
+    </Row>
   </div>
 </template>
 
@@ -12,7 +17,7 @@ export default {
   name: 'about',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: []
     }
   },
   methods: {
@@ -20,13 +25,16 @@ export default {
       synLogInfoApi({
         applyNo: this.msg
       }).then(xhr => {
-
+        this.msg = xhr.data.foods
       });
     }
-  }
+  },
+  created() {
+    this.getData();
+  },
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 
 </style>

@@ -9,6 +9,7 @@ import iView from 'iview';
 
 import App from './App'
 import routes from './router'
+import './mock/mock';
 
 Vue.config.productionTip = false
 

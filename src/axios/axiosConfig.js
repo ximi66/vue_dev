@@ -15,9 +15,9 @@ axios.interceptors.request.use((config) => {
 
 //响应数据
 axios.interceptors.response.use((response) => {
-  if (!response.data.success) {
+ /* if (!response.data.success) {
     iView.Message.error(response.data.errorMessage);
-  }
+  }*/
   return response;
 }, (error) => {
   iView.Message.error("网络开小差......");
